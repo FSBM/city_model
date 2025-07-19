@@ -8,7 +8,7 @@ THREE.ColorManagement.legacyMode = false
 
 const context = createContext()
 export function Instances({ children, ...props }) {
-  const { nodes } = useGLTF('/city_v1.glb')
+  const { nodes } = useGLTF('/final_with_low_size_city.glb')
   
   const instances = useMemo(
     () => ({
@@ -69,7 +69,7 @@ function CityMesh({ geometry, material, position, rotation, scale, onHover, isHo
 
 export function City(props) {
   const group = useRef()
-  const { nodes, materials } = useGLTF('/city_v1.glb')
+  const { nodes, materials } = useGLTF('/traffic_mesh.glb')
   const [hoveredMesh, setHoveredMesh] = useState(null)
   
   // Optimize materials
@@ -136,4 +136,4 @@ export function City(props) {
 }
 
 // Preload the model
-useGLTF.preload('/city_v1.glb')
+useGLTF.preload('/traffic_mesh.glb')
