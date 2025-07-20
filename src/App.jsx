@@ -25,7 +25,7 @@ export default function App() {
         {/* <GloomyCity scale={0.00008} /> */}
         {/* <City scale={0.08} /> */}
         {/* <NewCity scale={0.08} /> */}
-        <GloomyCity scale={0.8} />
+        <GloomyCity scale={0.8} position={[180, 0, 180]} />
 
 
       </Suspense>
