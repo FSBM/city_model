@@ -2,6 +2,8 @@ import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { Suspense } from 'react'
 import { GloomyCity } from './finalCity_V1'
+import { City } from './City'
+import { NewCity } from './NewCity'
 
 export default function App() {
   return (
@@ -16,20 +18,16 @@ export default function App() {
           enablePan={true}
           enableZoom={true}
           enableRotate={true}
-          minDistance={5}
-          maxDistance={50}
-          minPolarAngle={Math.PI / 4} // Restrict vertical rotation
-          maxPolarAngle={Math.PI / 3} // Restrict vertical rotation
-          minAzimuthAngle={-Math.PI / 2} // Restrict horizontal rotation
-          maxAzimuthAngle={Math.PI / 2} // Restrict horizontal rotation
-          dampingFactor={0.05}
-          rotateSpeed={0.5}
-          zoomSpeed={0.8}
           enableDamping={true}
         />
 
         {/* City Model */}
-        <GloomyCity scale={0.00008} />
+        {/* <GloomyCity scale={0.00008} /> */}
+        {/* <City scale={0.08} /> */}
+        {/* <NewCity scale={0.08} /> */}
+        <GloomyCity scale={0.8} />
+
+
       </Suspense>
     </Canvas>
   )
