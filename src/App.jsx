@@ -12,6 +12,22 @@ export default function App() {
       style={{ background: 'white' }}
       shadows
     >
+      <axesHelper args={[1000]} />
+      {/* Sea plane aligned with Z axis */}
+      <mesh position={[0, -0.5, 0]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
+        <planeGeometry args={[2000, 2000]} />
+        <meshPhysicalMaterial
+          color="#3a6ea5"
+          roughness={0.4}
+          metalness={0.3}
+          clearcoat={0.6}
+          clearcoatRoughness={0.2}
+          reflectivity={0.5}
+          transmission={0.2}
+          thickness={0.5}
+          ior={1.33}
+        />
+      </mesh>
       <Suspense fallback={null}>
         {/* Orbit Controls - Restricted to Y axis rotation */}
         <OrbitControls
